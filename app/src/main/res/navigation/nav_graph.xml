@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadData">
+
+    <fragment
+        android:id="@+id/loadData"
+        android:name="ua.youdin.randomuserrestapi.ui.load.LoadData"
+        android:label="Load data"
+        tools:layout="@layout/fragment_load_data" >
+        <action
+            android:id="@+id/action_loadData_to_detail"
+            app:destination="@id/detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail"
+        android:name="ua.youdin.randomuserrestapi.ui.detail.DetailFragment"
+        android:label="Detail data" >
+        <argument
+            android:name="data"
+            app:argType="ua.youdin.randomuserrestapi.data.randomuserApi.model.Data" />
+        <action
+            android:id="@+id/action_detail_to_loadData"
+            app:destination="@id/loadData" />
+    </fragment>
+</navigation>
