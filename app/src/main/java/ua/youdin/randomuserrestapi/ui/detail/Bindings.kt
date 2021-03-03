@@ -44,6 +44,6 @@ fun bindLogin(textView: TextView, login: Login) {
     textView.text =
         textView.context.getString(R.string.login).toUpperCase(Locale.ROOT) +
                 " ${login.username}" + "\n" +
-        textView.context.getString(R.string.password).toUpperCase(Locale.ROOT) +
+                textView.context.getString(R.string.password).toUpperCase(Locale.ROOT) +
                 " ${login.password}"
 }

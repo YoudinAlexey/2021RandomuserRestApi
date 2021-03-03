@@ -10,7 +10,7 @@ import ua.youdin.randomuserrestapi.databinding.ItemLoadDataBinding
 
 class DataViewHolder(private val binding: ItemLoadDataBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    fun bind(itemData: Data, viewModel: LoadDataViewModel, position:Int) {
+    fun bind(itemData: Data, viewModel: LoadDataViewModel, position: Int) {
         binding.position = position
         binding.viewmodel = viewModel
         binding.data = itemData

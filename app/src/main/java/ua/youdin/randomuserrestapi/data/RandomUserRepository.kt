@@ -11,15 +11,15 @@ import ua.youdin.randomuserrestapi.data.RandomUserPaddingSourse.Companion.START_
 import ua.youdin.randomuserrestapi.data.randomuserApi.RandomUserServise
 import ua.youdin.randomuserrestapi.data.randomuserApi.model.Data
 
-class RandomUserRepository (private val service: RandomUserServise) {
+class RandomUserRepository(private val service: RandomUserServise) {
 
     fun loadResult(): Flow<PagingData<Data>> =
-        Pager (
-            config = PagingConfig( pageSize = PAGE_SIZE, enablePlaceholders = false),
-            pagingSourceFactory = {RandomUserPaddingSourse(service)}
-                ).flow
+        Pager(
+            config = PagingConfig(pageSize = PAGE_SIZE, enablePlaceholders = false),
+            pagingSourceFactory = { RandomUserPaddingSourse(service) }
+        ).flow
 
-    companion object{
+    companion object {
         const val PAGE_SIZE = 20
     }
 }

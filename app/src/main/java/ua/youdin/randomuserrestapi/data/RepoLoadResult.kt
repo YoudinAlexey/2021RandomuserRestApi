@@ -9,7 +9,7 @@ sealed class RepoLoadResult<out R> {
 
     override fun toString(): String {
         return when (this) {
-            is Success-> "Success[data = $data]"
+            is Success -> "Success[data = $data]"
             is Error -> "Error[exeption = $error"
         }
     }

@@ -13,12 +13,12 @@ import java.util.*
 
 @SuppressLint("SetTextI18n")
 @BindingAdapter("name")
-fun bindName(textView: TextView, data:Data){
-    textView.text= "${data.name?.last} ${data.name?.first}".toUpperCase(Locale.ROOT)
+fun bindName(textView: TextView, data: Data) {
+    textView.text = "${data.name?.last} ${data.name?.first}".toUpperCase(Locale.ROOT)
 }
 
 @BindingAdapter("imageUrl")
-fun bindImage(imgView: ImageView, url:String){
+fun bindImage(imgView: ImageView, url: String) {
     url.let {
         val imgUri = it.toUri().buildUpon().scheme("https").build()
         Glide.with(imgView.context)
@@ -26,7 +26,8 @@ fun bindImage(imgView: ImageView, url:String){
             .apply(
                 RequestOptions()
                     .placeholder(R.drawable.loading_animation)
-                    .error(R.drawable.ic_broken_image))
+                    .error(R.drawable.ic_broken_image)
+            )
             .into(imgView)
     }
 }

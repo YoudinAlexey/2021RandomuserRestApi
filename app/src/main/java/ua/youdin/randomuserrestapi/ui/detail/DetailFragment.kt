@@ -10,11 +10,9 @@ import ua.youdin.randomuserrestapi.R
 import ua.youdin.randomuserrestapi.databinding.FragmentDetailBinding
 
 
-
 class DetailFragment : Fragment(R.layout.fragment_detail) {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
-
 
 
     override fun onCreateView(
